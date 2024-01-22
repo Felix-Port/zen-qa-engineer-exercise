@@ -9,18 +9,18 @@ This is an E2E UI automation test using Cypress framework.
   
 ## Installation
 
-- `npm i`
+- ***`npm i`***
 
 ## Running test
 
 * Run in headful mode or open cypress
-   - `npm run cypress:open`
+   - ***`npm run cypress:open`***
 
 * Run test in headless mode
-   - `npm run test-ci`
+   - ***`npm run test-ci`***
 
 ## Test Reports
-    - ### HTML Test reports can be found in the cypress/reports directory
+    - ### HTML Test reports can be found in the ***cypress/reports** directory
 
 
 
