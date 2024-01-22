@@ -34,14 +34,14 @@ describe('Zenith Bank Individual Current Account Test', () => {
     });
   })
 
-  it('Should validate requirements of Individual Current Account', () => {
+  it.only('Should validate requirements of Individual Current Account', () => {
     const expectedRecommendations = [
       "Account opening form duly completed",
       "One recent clear passport photograph of signatory",
       "Identification of signatories (Driver’s License, International Passport, National Identity Card or Voter’s Card)",
       "Residence permit (where applicable)",
-      "Two independent and satisfactory references",
-      "Public Utility Receipt dated within the last three months (PHCN bill, water rate bill, tenement rate, rentreceipt, telephone bill)" 
+      "Two independent and satisfactory references",
+      "Public Utility Receipt dated within the last three months (PHCN bill, water rate bill, tenement rate, rent receipt, telephone bill)" 
 ];
 
     cy.wait(200)
@@ -51,7 +51,7 @@ describe('Zenith Bank Individual Current Account Test', () => {
     cy.get("@recommendations-container").find('li').should("have.length",6);
     cy.get("@recommendations-container").find('li')
     .each(($li, index) => {
-      cy.wrap($li).should("include.text", expectedRecommendations[index]);
+      cy.wrap($li).should("have.text", expectedRecommendations[index]);
     });
   })
 
